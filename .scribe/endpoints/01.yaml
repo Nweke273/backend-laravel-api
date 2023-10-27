@@ -1,0 +1,108 @@
+name: Endpoints
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/articles
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      keyword:
+        name: keyword
+        description: ''
+        required: false
+        example: sunt
+        type: string
+        enumValues: []
+        custom: []
+      from_date:
+        name: from_date
+        description: 'Must be a valid date.'
+        required: false
+        example: '2023-10-25T09:40:59'
+        type: string
+        enumValues: []
+        custom: []
+      to_date:
+        name: to_date
+        description: 'Must be a valid date.'
+        required: false
+        example: '2023-10-25T09:40:59'
+        type: string
+        enumValues: []
+        custom: []
+      category:
+        name: category
+        description: ''
+        required: false
+        example: doloribus
+        type: string
+        enumValues: []
+        custom: []
+      source:
+        name: source
+        description: ''
+        required: false
+        example: veritatis
+        type: string
+        enumValues: []
+        custom: []
+    cleanBodyParameters:
+      keyword: sunt
+      from_date: '2023-10-25T09:40:59'
+      to_date: '2023-10-25T09:40:59'
+      category: doloribus
+      source: veritatis
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/articles/top-headlines
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

@@ -1,0 +1,159 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost'
+paths:
+  /api/v1/auth/register:
+    post:
+      summary: ''
+      operationId: postApiV1AuthRegister
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Auth
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: r
+                email:
+                  type: string
+                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
+                  example: jrolfson@example.org
+                password:
+                  type: string
+                  description: ''
+                  example: omnis
+              required:
+                - name
+                - email
+                - password
+      security: []
+  /api/v1/auth/login:
+    post:
+      summary: ''
+      operationId: postApiV1AuthLogin
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Auth
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: catharine92@example.org
+                password:
+                  type: string
+                  description: ''
+                  example: possimus
+              required:
+                - email
+                - password
+      security: []
+  /api/v1/articles:
+    get:
+      summary: ''
+      operationId: getApiV1Articles
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                keyword:
+                  type: string
+                  description: ''
+                  example: sunt
+                from_date:
+                  type: string
+                  description: 'Must be a valid date.'
+                  example: '2023-10-25T09:40:59'
+                to_date:
+                  type: string
+                  description: 'Must be a valid date.'
+                  example: '2023-10-25T09:40:59'
+                category:
+                  type: string
+                  description: ''
+                  example: doloribus
+                source:
+                  type: string
+                  description: ''
+                  example: veritatis
+      security: []
+  /api/v1/articles/top-headlines:
+    get:
+      summary: ''
+      operationId: getApiV1ArticlesTopHeadlines
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /api/v1/user/preferences:
+    post:
+      summary: ''
+      operationId: postApiV1UserPreferences
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - User
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                preferences:
+                  type: string
+                  description: ''
+                  example: est
+              required:
+                - preferences
+      security: []
+tags:
+  -
+    name: Auth
+    description: ''
+  -
+    name: Endpoints
+    description: ''
+  -
+    name: User
+    description: ''
+components:
+  securitySchemes:
+    default:
+      type: http
+      scheme: bearer
+      description: 'You can retrieve your token by visiting your dashboard and clicking <b>Generate API token</b>.'
+security:
+  -
+    default: []
